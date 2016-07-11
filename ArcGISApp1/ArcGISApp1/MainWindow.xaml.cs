@@ -43,9 +43,9 @@ namespace ArcGISApp1
 
             var Coords2 = new Esri.ArcGISRuntime.Geometry.PointCollection();
             Coords2.Add(5577200, 7019500);
-            Coords2.Add(5577200, 7019500);
-            Coords2.Add(5577200, 7019500);
-            Coords2.Add(5577200, 7019500);
+            Coords2.Add(5577100, 7019600);
+            Coords2.Add(5577100, 7019700);
+            Coords2.Add(5577000, 7019700);
 
             var complexPolygon = new Esri.ArcGISRuntime.Geometry.Polygon(Coords1);
             var polygonBldr = new Esri.ArcGISRuntime.Geometry.PolygonBuilder(complexPolygon);
@@ -57,8 +57,9 @@ namespace ArcGISApp1
             polyGraphic.Geometry = complexPolygon;
             polyGraphic.Symbol = polySymbol;
 
-            // add the graphic to the graphics layer; zoom to it
+            // add the graphic to the graphics layer
             graphicsLayer.Graphics.Add(polyGraphic);
+
             //MyMapView.SetViewAsync(complexPolygon.Extent);
 
             // use the MapView's Editor to get polygon geometry from the user
@@ -71,13 +72,8 @@ namespace ArcGISApp1
             //polyGraphic.Symbol = polySymbol;
 
             // add the graphic to the graphics layer
-            // graphicsLayer.Graphics.Add(polyGraphic);
+            // graphicsLayer.Graphics.Add(polyGraphic);    
             Debug.WriteLine(string.Format("Error while loading layer : {0} - {1}", e.Layer.ID, e.LoadError.Message));
         }
-        private void GraphicLay(object sender, LayerLoadedEventArgs e)
-        {
-            
-        }
-
     }
 }

@@ -6,7 +6,7 @@
 		Height="350" 
 		Width="525">
     <Grid>
-		<esri:MapView x:Name="MyMapView"
+        <esri:MapView x:Name="MyMapView"
 					  LayerLoaded="MyMapView_LayerLoaded">
             <esri:Map x:Name="MyMap">
                 <esri:ArcGISTiledMapServiceLayer ID="Basemap"
@@ -20,6 +20,6 @@
                         YMax="7019900"/>
                 </esri:Map.InitialViewpoint>
             </esri:Map>
-		</esri:MapView>
+        </esri:MapView>
     </Grid>
 </Window>
